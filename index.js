@@ -17,13 +17,13 @@ app.get('/', function (req, res) {
 });
 
 
-let port = process.env.PORT || 4000;
+let port = process.env.OPENSHIFT_NODEJS_PORT || 4000;
 let server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 
 
 app.listen(port, server_ip_address, () => {
-	console.log('Server Works !!! At port 4000');
+	console.log('"Listening on " + server_ip_address + ", port " + server_port');
 });
 
 app.get('/download', (req,res) => {
