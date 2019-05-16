@@ -5,7 +5,7 @@ const ytdl = require('ytdl-core');
 const app = express();
 
 let port = process.env.PORT || 4000;
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+let server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 app.use(cors());
 
