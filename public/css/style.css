@@ -3,7 +3,6 @@
 }
 body {
 	max-width:1200px;
-	min-width:352px;
 	display:flex;
 	flex-direction:column;
 }
@@ -45,4 +44,26 @@ img {
 	border:2px solid #0485ff;
 	background: #0485ff;
 	color:white;
+}
+@media all and (max-width: 600px)  {
+	body
+	{font-size:0.8 em;
+	}
+	img {
+		max-width:281px;
+		max-height:171px;
+		
+	}
+	@media all and (max-width: 300px)  {
+		body
+		{font-size:0.6 em;
+		}
+		img {
+		max-width:234px;
+		max-height:142px;
+			
+		}
+
+
+
 }
