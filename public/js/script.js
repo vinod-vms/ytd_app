@@ -9,5 +9,5 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-	window.location.href = `${ipAdd}:${prt}/download?URL=${URL}`;
+	window.location.href = `http://0.0.0.0:8080/download?URL=${URL}`;
 }
