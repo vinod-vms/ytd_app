@@ -19,7 +19,7 @@ let ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 
 app.listen(port, ip, () => {
-	console.log('Server Works !!! At port 8080');
+	console.log(`Server Works !!! At port ${port} and ip ${ip}`);
 });
 
 app.get('/', function (req, res) {
