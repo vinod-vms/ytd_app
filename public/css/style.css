@@ -54,6 +54,11 @@ img {
 		max-height:171px;
 		
 	}
+	.URL-input {
+	width:25em;
+	
+}
+}
 	@media all and (max-width: 300px)  {
 		body
 		{font-size:0.6 em;
@@ -63,6 +68,10 @@ img {
 		max-height:142px;
 			
 		}
+	.URL-input {
+	width:20em;
+	
+}
 
 
 
