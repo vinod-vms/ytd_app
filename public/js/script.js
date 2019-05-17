@@ -1,7 +1,7 @@
 var convertBtn = document.querySelector('.convert-button');
 var URLinput = document.querySelector('.URL-input');
-//let port = process.env.PORT || 4000;
-//let server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+let prt = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
+let ipAdd = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 convertBtn.addEventListener('click', () => {
 	console.log(`URL: ${URLinput.value}`);	
@@ -9,5 +9,5 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-	window.location.href = `${window.location.href}/download?URL=${URL}`;
+	window.location.href = `${ipAdd}:${prt}/download?URL=${URL}`;
 }
