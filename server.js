@@ -17,12 +17,12 @@ app.get('/', function (req, res) {
 });
 
 
-//var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
-//ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
 
 
 
-app.listen(4000, () => {
+app.listen(port, ip, () => {
 	console.log('Server Works !!! At port 8080');
 });
 
