@@ -1,13 +1,10 @@
 var convertBtn = document.querySelector('.convert-button');
 var URLinput = document.querySelector('.URL-input');
-let prt = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
-let ipAdd = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
-
 convertBtn.addEventListener('click', () => {
 	console.log(`URL: ${URLinput.value}`);	
 	sendURL(URLinput.value);
 });
 
 function sendURL(URL) {
-	window.location.href = `http://0.0.0.0:8080/download?URL=${URL}`;
+	window.location.href = `http://anjitha-app-anjitha-app.1d35.starter-us-east-1.openshiftapps.com/download?URL=${URL}`;
 }
