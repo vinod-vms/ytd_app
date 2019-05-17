@@ -12,10 +12,6 @@ app.set('view engine', 'handlebars');
 app.use(cors());
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.get('/', function (req, res) {
-    res.render('home');
-});
-
 
 let port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 let ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
@@ -24,6 +20,10 @@ let ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 app.listen(port, ip, () => {
 	console.log('Server Works !!! At port 8080');
+});
+
+app.get('/', function (req, res) {
+    res.render('home');
 });
 
 app.get('/download', (req,res) => {
